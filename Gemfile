@@ -8,7 +8,6 @@ gem 'pg'
 
 gem 'pry-rails'
 gem 'pry-doc'
-gem 'slim-rails'
 gem 'thin'
 
 group :development, :test do

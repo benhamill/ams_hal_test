@@ -18,7 +18,17 @@ ActionController.add_renderer(Mime::HAL.symbol) do |resource, options|
 end
 
 module ActiveModel::ArraySerializerSupport
-  def active_model_serializer
-    HalArraySerializer
+  if "".respond_to?(:safe_constantize)
+    def active_model_serializer
+      "#{klass.name.pluralize}Serializer".safe_constantize
+    end
+  else
+    def active_model_serializer
+      begin
+        "#{klass.name.pluralize}Serializer".constantize
+      rescue NameError => e
+        raise unless e.message =~ /uninitialized constant/
+      end
+    end
   end
 end

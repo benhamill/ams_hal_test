@@ -4,7 +4,6 @@ class AuthorSerializer < HalSerializer
   link :self do |author_serializer|
     {
       href: Zooplankton.path_template_for(:author, id: author_serializer.object.id),
-      templated: true
     }
   end
 

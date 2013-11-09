@@ -15,13 +15,16 @@ class HalArraySerializer < ActiveModel::ArraySerializer
   private
 
   def _serializable_array
-    { _embedded: { embedded_resource_name => super } }.tap do |obj|
-      obj[:_links] = links if links.any?
-    end
+    hash = {}
+
+    hash[:_links] = links if links.any?
+    hash[:_embedded] =  { embedded_resource_name => super }
+
+    hash
   end
 
   def embedded_resource_name
-    name = object.table.name
+    name = object.klass.name.demodulize.underscore.pluralize
 
     if self._embedded_resource_name == true
       name

@@ -1,7 +1,5 @@
-# AmsHalTest
+# AMS Hal Test
 
-Write a short description here.
-
-## Getting Going
-
-Write instructions for how to get your app from checkout to green tests here.
+This is a testing ground for how I think generating HAL with
+ActiveModel::Serializers should work. It's all experimental and may or may not
+result in my making a gem or a Pull Request to AMS.

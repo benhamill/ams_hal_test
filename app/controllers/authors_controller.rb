@@ -1,5 +1,5 @@
 class AuthorsController < ApplicationController
   def index
-    render text: 'hello'
+    render hal: Author.order('created_at DESC')
   end
 end

@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+authors = []
+
+authors << Author.create(first_name: 'Ben', last_name: 'Hamill', created_at: 4.days.ago)
+authors << Author.create(first_name: 'Bob', last_name: 'Potter', created_at: 3.days.ago)
+authors << Author.create(first_name: 'Ryan', last_name: 'Michael', created_at: 2.days.ago)
+authors << Author.create(first_name: 'Josh', last_name: 'Smith', created_at: 1.day.ago)
+authors << Author.create(first_name: 'Raman', last_name: 'Sinha')

@@ -9,7 +9,7 @@ gem 'pg'
 gem 'pry-rails'
 gem 'pry-doc'
 gem 'thin'
-gem 'active_model_serializers', git: 'https://github.com/rails-api/active_model_serializers.git', branch: 'master'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'rspec-rails'

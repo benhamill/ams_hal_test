@@ -10,6 +10,7 @@ gem 'pry-rails'
 gem 'pry-doc'
 gem 'thin'
 gem 'active_model_serializers'
+gem 'zooplankton'
 
 group :development, :test do
   gem 'rspec-rails'

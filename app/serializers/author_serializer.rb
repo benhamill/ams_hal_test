@@ -5,6 +5,8 @@ class AuthorSerializer < HalSerializer
     l.href Zooplankton.path_template_for(:author, id: object.id)
   end
 
+  has_many :posts
+
   def created_at
     object.created_at.strftime("%b %d %Y")
   end

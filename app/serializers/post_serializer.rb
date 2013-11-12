@@ -1,3 +1,7 @@
-class PostSerializer < ActiveModel::Serializer
-  attributes :id, :title, :body
+class PostSerializer < HalSerializer
+  attributes :title, :body
+
+  link :self do |l|
+    l.href post_path(object)
+  end
 end

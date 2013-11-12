@@ -15,4 +15,5 @@ gem 'zooplankton'
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara-webkit'
+  gem 'faker'
 end

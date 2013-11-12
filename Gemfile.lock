@@ -44,6 +44,8 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    faker (1.2.0)
+      i18n (~> 0.5)
     hike (1.2.3)
     i18n (0.6.5)
     json (1.8.1)
@@ -134,6 +136,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   capybara-webkit
+  faker
   pg
   pry-doc
   pry-rails

@@ -13,3 +13,12 @@ authors << Author.create(first_name: 'Bob', last_name: 'Potter', created_at: 3.d
 authors << Author.create(first_name: 'Ryan', last_name: 'Michael', created_at: 2.days.ago)
 authors << Author.create(first_name: 'Josh', last_name: 'Smith', created_at: 1.day.ago)
 authors << Author.create(first_name: 'Raman', last_name: 'Sinha')
+
+authors.each do |author|
+  (rand(5) + 1).times do
+    author.posts.create(
+      title: Faker::Lorem.sentence,
+      body: Faker::Lorem.paragraphs.join,
+    )
+  end
+end
